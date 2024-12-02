@@ -78,8 +78,8 @@ end
 # puts "User updated: #{updated_user.join(' | ')}"
 
 # 5) Deleting user
-Users.delete(31)
-puts "User deleted with ID: 31"
+# Users.delete(31)
+# puts "User deleted with ID: 31"
   
 
 
