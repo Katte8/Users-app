@@ -29,8 +29,6 @@ Session Management: The application uses cookies to maintain session states. Whe
 1. Clone the Repository**
 
    First, clone the repository to your local machine:
-
-   ```bash
    git clone https://github.com/Katte8/Users-app.git
 
 2. Navigate to the Project Directory
@@ -40,16 +38,11 @@ Session Management: The application uses cookies to maintain session states. Whe
 
 3. Install Dependencies
 
-   Project requires installing the required gems. If you are using Bundler, follow these steps:
-
-    - Install Bundler (if you don't have it installed already):
-    gem install bundler
-
-    - Install the gems
-    bundle install
-
-    - If you are not using Bundler, you can manually install the required gems by running:
-    gem install sinatra sqlite3
+    gem install sinatra
+    gem install sqlite3
+    gem install puma
+    gem install sinatra-contrib
+    gem install rackup puma
 
 ## Usage
 1. Start the Sinatra application: To start the server, run the following command in your terminal from the project directory:
@@ -72,7 +65,6 @@ curl -X POST -i http://localhost:8080/sign_in -d "email=john@example.com" -d "pa
 - Update user information (PUT /users): To update the password of a user, use the following curl command (use your rack.session=A....; httponly):
 curl -X PUT -i http://localhost:8080/users -d "password=newpassword" -b "rack.session=your_session_id"
 
-
 - Sign out (DELETE /sign_out): To sign out the current user:
 curl -X DELETE -i http://localhost:8080/sign_out -b "rack.session=your_session_id"
 
@@ -80,7 +72,6 @@ curl -X DELETE -i http://localhost:8080/sign_out -b "rack.session=your_session_i
 curl -X DELETE -i http://localhost:8080/users -b "rack.session=your_session_id"
 
 ### The Core Team
-
 
 <span><i>Made at <a href='https://qwasar.io'>Qwasar SV -- Software Engineering School</a></i></span>
 <span><img alt='Qwasar SV -- Software Engineering School's Logo' src='https://storage.googleapis.com/qwasar-public/qwasar-logo_50x50.png' width='20px' /></span>
